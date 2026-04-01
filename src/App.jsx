@@ -374,9 +374,13 @@ function Contact() {
       <SectionLabel>Contact</SectionLabel>
 
       {/* Photo strip */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 40, borderRadius: 16, overflow: "hidden", maxHeight: 200 }} className="photo-strip">
-        <img src={PROFILE_IMG} alt="Govinda at Auckland Viaduct" style={{ width: "100%", height: 200, objectFit: "cover", objectPosition: "center top" }} />
-        <img src={BG_IMG} alt="Govinda at Auckland lookout" style={{ width: "100%", height: 200, objectFit: "cover", objectPosition: "center 30%" }} />
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 40 }} className="photo-strip">
+        <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "4/3" }}>
+          <img src={PROFILE_IMG} alt="Govinda at Auckland Viaduct" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 15%" }} />
+        </div>
+        <div style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "4/3" }}>
+          <img src={BG_IMG} alt="Govinda at Auckland lookout" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        </div>
       </div>
 
       <p style={{ fontSize: 15, color: C.muted, fontFamily: "system-ui", marginBottom: 24, lineHeight: 1.7 }}>Open to senior network & infrastructure engineering opportunities in New Zealand.</p>
